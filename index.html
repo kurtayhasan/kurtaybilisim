@@ -4,9 +4,54 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <title>Kurtay Bilişim | Mardin & Irak - Wolvox ERP & Otomasyon Çözümleri</title>
-    <meta name="description" content="Mardin Kızıltepe merkezli Kurtay Bilişim; Irak ve Güneydoğu'da Market Barkod, Restoran Adisyon ve Akaryakıt Otomasyonu hizmeti sunan Akınsoft Ana Bayisidir.">
-    
+    <title>Kurtay Bilişim | Mardin Akınsoft Ana Bayi - ERP & Otomasyon Sistemleri</title>
+    <meta name="description" content="Mardin Kızıltepe merkezli Kurtay Bilişim; Irak ve Güneydoğu Anadolu'da Market Barkod, Restoran Adisyon, Akaryakıt Otomasyonu ve Wolvox ERP hizmeti sunan Yetkili Ana Bayidir.">
+    <meta name="keywords" content="Mardin Akınsoft, Kızıltepe Yazılım, Irak ERP, Erbil Barkod Sistemi, Restoran Adisyon Mardin, Akaryakıt Otomasyonu, Kurtay Bilişim">
+    <meta name="author" content="Kurtay Bilişim">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://kurtaybilisim.com">
+
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Kurtay Bilişim | Teknoloji Çözüm Ortağınız">
+    <meta property="og:description" content="Mardin'den Irak'a uzanan teknoloji köprüsü. İşletmenizi dijitalleştirin.">
+    <meta property="og:image" content="https://www.akinsoft.com.tr/logo/images/yatay-ana-bayi.png">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "Kurtay Bilişim Akınsoft Ana Bayi",
+      "image": "https://www.akinsoft.com.tr/logo/images/yatay-ana-bayi.png",
+      "telephone": "+905438140449",
+      "email": "info@kurtaybilisim.com",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Kızıltepe Merkez",
+        "addressLocality": "Kızıltepe",
+        "addressRegion": "Mardin",
+        "postalCode": "47400",
+        "addressCountry": "TR"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 37.1944,
+        "longitude": 40.5844
+      },
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+        "opens": "08:30",
+        "closes": "19:00"
+      },
+      "sameAs": [
+        "https://www.facebook.com/akinsoft.mardin",
+        "https://www.instagram.com/kurumsalkurtay/"
+      ]
+    }
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;700;800&display=swap" rel="stylesheet">
     <script src="https://unpkg.com/lucide@latest"></script>
     <script src="https://cdn.tailwindcss.com"></script>
@@ -26,23 +71,22 @@
     <style>
         body { font-family: 'Outfit', sans-serif; }
         
-        /* Modern Arkaplan Deseni */
+        /* Modern Grid Arkaplan */
         .bg-grid-pattern {
             background-color: #ffffff;
             background-image: radial-gradient(#e5e7eb 1px, transparent 1px);
             background-size: 32px 32px;
         }
 
-        /* Google Translate Gizleme (Sadece Bayraklar Görünecek) */
+        /* Çeviri Barını Gizle */
         .goog-te-banner-frame.skiptranslate { display: none !important; } 
         body { top: 0px !important; } 
         #google_translate_element { display: none; }
         
-        /* Kart Hover Efektleri */
-        .bento-card { transition: all 0.3s ease; }
+        /* Hover ve Animasyonlar */
+        .bento-card { transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1); }
         .bento-card:hover { transform: translateY(-5px); box-shadow: 0 20px 40px -5px rgba(0, 0, 0, 0.1); }
 
-        /* WhatsApp Animasyonu */
         @keyframes pulse-green {
             0% { box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7); }
             70% { box-shadow: 0 0 0 20px rgba(37, 211, 102, 0); }
@@ -50,7 +94,7 @@
         }
         .whatsapp-float { animation: pulse-green 2s infinite; }
 
-        /* Admin Modal */
+        /* Modal Efektleri */
         .hidden-modal { opacity: 0; pointer-events: none; transform: scale(0.95); }
         .visible-modal { opacity: 1; pointer-events: auto; transform: scale(1); }
         .transition-modal { transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1); }
@@ -60,256 +104,264 @@
 
     <div id="google_translate_element"></div>
 
-    <nav class="fixed w-full z-50 bg-white/90 backdrop-blur-lg border-b border-slate-200">
-        <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
-            <div class="flex items-center gap-3 cursor-pointer group" onclick="window.scrollTo(0,0)">
-                <div class="w-10 h-10 bg-blue-950 rounded-xl flex items-center justify-center text-white font-bold text-xl shadow-lg group-hover:rotate-6 transition duration-300">K</div>
-                <div class="flex flex-col">
-                    <span class="text-xl font-bold tracking-tight text-blue-950 leading-none">KURTAY</span>
-                    <span class="text-[10px] font-bold text-blue-600 tracking-[0.3em]">BİLİŞİM</span>
+    <header>
+        <nav class="fixed w-full z-50 bg-white/90 backdrop-blur-lg border-b border-slate-200 shadow-sm">
+            <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+                <div class="flex items-center gap-3 cursor-pointer group" onclick="window.scrollTo(0,0)">
+                    <div class="w-10 h-10 bg-blue-950 rounded-xl flex items-center justify-center text-white font-bold text-xl shadow-lg group-hover:rotate-6 transition duration-300">K</div>
+                    <div class="flex flex-col">
+                        <span class="text-xl font-bold tracking-tight text-blue-950 leading-none">KURTAY</span>
+                        <span class="text-[10px] font-bold text-blue-600 tracking-[0.3em]">BİLİŞİM</span>
+                    </div>
                 </div>
-            </div>
 
-            <div class="hidden md:flex items-center gap-8 text-sm font-semibold text-slate-500">
-                <a href="#hizmetler" class="hover:text-blue-900 transition">Çözümler</a>
-                <a href="#referanslar" class="hover:text-blue-900 transition">Referanslar</a>
-                <a href="#iletisim" class="hover:text-blue-900 transition">İletişim</a>
-                
-                <div class="flex items-center gap-3 border-l pl-6 border-slate-200" id="lang-flags">
-                    <button onclick="changeLang('tr')" class="hover:scale-110 transition opacity-80 hover:opacity-100" title="Türkçe"><img src="https://flagcdn.com/w40/tr.png" class="w-6 h-4 rounded shadow-sm"></button>
-                    <button onclick="changeLang('en')" class="hover:scale-110 transition opacity-80 hover:opacity-100" title="English"><img src="https://flagcdn.com/w40/gb.png" class="w-6 h-4 rounded shadow-sm"></button>
-                    <button onclick="changeLang('ar')" class="hover:scale-110 transition opacity-80 hover:opacity-100" title="العربية"><img src="https://flagcdn.com/w40/iq.png" class="w-6 h-4 rounded shadow-sm"></button>
-                    <button onclick="changeLang('ku')" class="hover:scale-110 transition opacity-80 hover:opacity-100" title="Kurdî"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Flag_of_Kurdistan.svg/320px-Flag_of_Kurdistan.svg.png" class="w-6 h-4 rounded shadow-sm object-cover"></button>
-                </div>
-            </div>
-
-            <a href="https://wa.me/905438140449" class="hidden sm:flex bg-blue-950 text-white px-6 py-2.5 rounded-full text-sm font-bold hover:bg-blue-800 transition shadow-lg shadow-blue-900/20 items-center gap-2">
-                Teklif Al <i data-lucide="arrow-right" class="w-4 h-4"></i>
-            </a>
-        </div>
-    </nav>
-
-    <section class="pt-32 pb-20 bg-grid-pattern relative overflow-hidden">
-        <div class="absolute top-0 right-0 w-[600px] h-[600px] bg-blue-100/60 rounded-full blur-3xl -mr-20 -mt-20 pointer-events-none"></div>
-        
-        <div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center relative z-10">
-            <div class="space-y-8">
-                <div class="inline-flex items-center gap-2 bg-white border border-blue-100 rounded-full px-4 py-1.5 shadow-sm">
-                    <span class="flex h-2 w-2 relative">
-                        <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
-                        <span class="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span>
-                    </span>
-                    <span class="text-xs font-bold text-blue-900 uppercase tracking-wide">Mardin & Irak Yetkili Çözüm Merkezi</span>
-                </div>
-                
-                <h1 class="text-5xl lg:text-7xl font-extrabold text-blue-950 leading-[1.1]">
-                    İşletmenizi <br>
-                    <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600">Teknolojiyle Büyütün.</span>
-                </h1>
-                
-                <p class="text-lg text-slate-600 max-w-lg leading-relaxed">
-                    Wolvox ERP güvencesiyle; Market, Restoran, Akaryakıt ve İhracat süreçlerinizi tek merkezden yönetin. Hatasız, hızlı ve güvenli.
-                </p>
-                
-                <div class="flex flex-col sm:flex-row gap-4">
-                    <a href="#hizmetler" class="bg-blue-950 text-white px-8 py-4 rounded-2xl font-bold hover:bg-blue-900 transition flex items-center justify-center gap-2 shadow-xl shadow-blue-900/20 hover:-translate-y-1">
-                        Çözümleri İncele
+                <div class="hidden md:flex items-center gap-8 text-sm font-semibold text-slate-500">
+                    <a href="#hizmetler" class="hover:text-blue-900 transition relative group">
+                        Çözümler <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-900 transition-all group-hover:w-full"></span>
                     </a>
-                    <a href="tel:05438140449" class="bg-white text-blue-950 border border-slate-200 px-8 py-4 rounded-2xl font-bold hover:bg-slate-50 transition flex items-center justify-center gap-2">
-                        <i data-lucide="phone" class="w-5 h-5"></i> 0543 814 04 49
+                    <a href="#referanslar" class="hover:text-blue-900 transition relative group">
+                        Referanslar <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-900 transition-all group-hover:w-full"></span>
                     </a>
-                </div>
-            </div>
-
-            <div class="relative group">
-                <div class="relative z-10 rounded-3xl overflow-hidden shadow-2xl border-[6px] border-white transform transition duration-500 hover:scale-[1.01]">
-                    <img src="https://images.unsplash.com/photo-1556742049-0cfed4f7a07d?auto=format&fit=crop&q=80&w=800" alt="Barkod Sistemi ve ERP Ekranı" class="w-full h-[500px] object-cover">
+                    <a href="#iletisim" class="hover:text-blue-900 transition relative group">
+                        İletişim <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-blue-900 transition-all group-hover:w-full"></span>
+                    </a>
                     
-                    <div class="absolute inset-0 bg-gradient-to-t from-blue-950/90 via-transparent to-transparent flex flex-col justify-end p-8">
-                        <div class="text-white">
-                            <h3 class="font-bold text-2xl">Uçtan Uca Otomasyon</h3>
-                            <p class="text-blue-200">Stok, Cari, Fatura ve Raporlama Sistemi</p>
-                        </div>
+                    <div class="flex items-center gap-3 border-l pl-6 border-slate-200" id="lang-flags">
+                        <button onclick="changeLang('tr')" class="hover:scale-110 transition opacity-80 hover:opacity-100" title="Türkçe" aria-label="Türkçe"><img src="https://flagcdn.com/w40/tr.png" class="w-6 h-4 rounded shadow-sm" alt="TR"></button>
+                        <button onclick="changeLang('en')" class="hover:scale-110 transition opacity-80 hover:opacity-100" title="English" aria-label="English"><img src="https://flagcdn.com/w40/gb.png" class="w-6 h-4 rounded shadow-sm" alt="EN"></button>
+                        <button onclick="changeLang('ar')" class="hover:scale-110 transition opacity-80 hover:opacity-100" title="العربية" aria-label="Arabic"><img src="https://flagcdn.com/w40/iq.png" class="w-6 h-4 rounded shadow-sm" alt="AR"></button>
+                        <button onclick="changeLang('ku')" class="hover:scale-110 transition opacity-80 hover:opacity-100" title="Kurdî" aria-label="Kurdish"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/35/Flag_of_Kurdistan.svg/320px-Flag_of_Kurdistan.svg.png" class="w-6 h-4 rounded shadow-sm object-cover" alt="KU"></button>
                     </div>
                 </div>
 
-                <div class="absolute -right-6 bottom-32 bg-white p-4 rounded-2xl shadow-xl border border-slate-100 z-20 animate-bounce" style="animation-duration: 4s;">
-                    <div class="flex items-center gap-3">
-                        <div class="bg-orange-100 p-3 rounded-xl text-orange-600"><i data-lucide="fuel" class="w-6 h-6"></i></div>
-                        <div>
-                            <p class="text-[10px] text-slate-400 font-bold uppercase">AKARYAKIT</p>
-                            <p class="font-bold text-blue-950">Vardiya & Pompa</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="absolute -left-6 top-24 bg-white p-4 rounded-2xl shadow-xl border border-slate-100 z-20 animate-bounce" style="animation-duration: 3s;">
-                    <div class="flex items-center gap-3">
-                        <div class="bg-red-100 p-3 rounded-xl text-red-600"><i data-lucide="utensils" class="w-6 h-6"></i></div>
-                        <div>
-                            <p class="text-[10px] text-slate-400 font-bold uppercase">RESTORAN</p>
-                            <p class="font-bold text-blue-950">Adisyon & Menü</p>
-                        </div>
-                    </div>
-                </div>
+                <a href="https://wa.me/905438140449" class="hidden sm:flex bg-blue-950 text-white px-6 py-2.5 rounded-full text-sm font-bold hover:bg-blue-800 transition shadow-lg shadow-blue-900/20 items-center gap-2">
+                    Teklif Al <i data-lucide="arrow-right" class="w-4 h-4"></i>
+                </a>
             </div>
-        </div>
-    </section>
+        </nav>
+    </header>
 
-    <section id="hizmetler" class="py-24 bg-white">
-        <div class="max-w-7xl mx-auto px-6">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl font-bold mb-4 text-blue-950">Sektörel Çözümler</h2>
-                <p class="text-slate-500 max-w-2xl mx-auto">İhtiyacınıza tam uyan, gereksiz detaylardan arındırılmış profesyonel paketler.</p>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 auto-rows-[340px]">
-                
-                <div class="md:col-span-2 bento-card bg-slate-50 rounded-3xl p-8 border border-slate-100 relative overflow-hidden group">
-                    <div class="relative z-10 flex flex-col justify-between h-full">
-                        <div>
-                            <div class="w-12 h-12 bg-blue-600 text-white rounded-xl flex items-center justify-center mb-6 shadow-lg shadow-blue-600/20">
-                                <i data-lucide="scan-barcode" class="w-6 h-6"></i>
-                            </div>
-                            <h3 class="text-2xl font-bold text-blue-950 mb-3">Market & Hızlı Satış</h3>
-                            <p class="text-slate-600 max-w-md">Barkodlu terazi entegrasyonu, hızlı kasiyer ekranı, raf etiketi basımı ve saniyelik stok takibi. Kasada beklemek yok, hata yok.</p>
-                        </div>
-                        <a href="https://wa.me/905438140449" class="inline-flex items-center gap-2 text-blue-700 font-bold mt-4 hover:gap-4 transition-all">Detaylı Bilgi <i data-lucide="arrow-right" class="w-4 h-4"></i></a>
-                    </div>
-                    <div class="absolute right-0 bottom-0 w-64 h-64 bg-blue-100 rounded-full blur-3xl opacity-50 translate-x-1/3 translate-y-1/3 group-hover:bg-blue-200 transition"></div>
-                </div>
-
-                <div class="md:row-span-2 bento-card bg-blue-950 text-white rounded-3xl p-8 relative overflow-hidden group">
-                    <div class="absolute inset-0 bg-gradient-to-br from-blue-900 to-slate-900"></div>
-                    <div class="relative z-10 flex flex-col h-full">
-                        <div class="w-12 h-12 bg-orange-500 text-white rounded-xl flex items-center justify-center mb-6 shadow-lg shadow-orange-500/20">
-                            <i data-lucide="fuel" class="w-6 h-6"></i>
-                        </div>
-                        <h3 class="text-2xl font-bold mb-4">Akaryakıt Otomasyonu</h3>
-                        <p class="text-blue-200 text-sm mb-6 leading-relaxed">İstasyonlar için uçtan uca çözüm: Pompa yazar kasa, tank otomasyonu ve market entegrasyonu tek ekranda.</p>
-                        
-                        <div class="space-y-4 mb-8">
-                            <div class="flex items-center gap-3 p-3 bg-white/10 rounded-xl">
-                                <i data-lucide="check-circle" class="w-5 h-5 text-green-400"></i>
-                                <span class="text-sm font-medium">Vardiya Takibi</span>
-                            </div>
-                            <div class="flex items-center gap-3 p-3 bg-white/10 rounded-xl">
-                                <i data-lucide="check-circle" class="w-5 h-5 text-green-400"></i>
-                                <span class="text-sm font-medium">Tank Seviye Kontrol</span>
-                            </div>
-                            <div class="flex items-center gap-3 p-3 bg-white/10 rounded-xl">
-                                <i data-lucide="check-circle" class="w-5 h-5 text-green-400"></i>
-                                <span class="text-sm font-medium">EPDK Uyumlu</span>
-                            </div>
-                        </div>
-
-                        <div class="mt-auto">
-                            <a href="https://wa.me/905438140449" class="block w-full py-4 bg-white text-blue-950 rounded-xl text-center font-bold hover:bg-blue-50 transition">Teklif İste</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="bento-card bg-white rounded-3xl p-8 border border-slate-100 shadow-sm hover:border-red-100 group">
-                    <div class="w-12 h-12 bg-red-100 text-red-600 rounded-xl flex items-center justify-center mb-6">
-                        <i data-lucide="utensils-crossed" class="w-6 h-6"></i>
-                    </div>
-                    <h3 class="text-xl font-bold text-blue-950 mb-2">Restoran Adisyon</h3>
-                    <p class="text-slate-500 text-sm">Garson el terminali, mutfak yazıcısı, QR Menü ve paket servis modülü. Hızlı servis, memnun müşteri.</p>
-                </div>
-
-                <div class="bento-card bg-white rounded-3xl p-8 border border-slate-100 shadow-sm hover:border-indigo-100 group">
-                    <div class="w-12 h-12 bg-indigo-100 text-indigo-600 rounded-xl flex items-center justify-center mb-6">
-                        <i data-lucide="bar-chart-3" class="w-6 h-6"></i>
-                    </div>
-                    <h3 class="text-xl font-bold text-blue-950 mb-2">Wolvox ERP</h3>
-                    <p class="text-slate-500 text-sm">Irak ihracat yönetimi, ön muhasebe, e-Fatura, e-İrsaliye ve detaylı finansal raporlama.</p>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-    <section id="referanslar" class="py-20 bg-slate-50 border-t border-slate-200">
-        <div class="max-w-7xl mx-auto px-6 text-center">
-            <h2 class="text-2xl font-bold text-blue-950 mb-10">Bölgesel Referans Noktalarımız</h2>
+    <main>
+        <section class="pt-32 pb-20 bg-grid-pattern relative overflow-hidden">
+            <div class="absolute top-0 right-0 w-[600px] h-[600px] bg-blue-100/60 rounded-full blur-3xl -mr-20 -mt-20 pointer-events-none"></div>
             
-            <div class="flex flex-wrap justify-center gap-4">
-                <div class="bg-white px-6 py-3 rounded-lg border border-slate-200 font-semibold text-slate-600 shadow-sm">MARDİN (Gıda & Toptan)</div>
-                <div class="bg-white px-6 py-3 rounded-lg border border-slate-200 font-semibold text-slate-600 shadow-sm">IRAK/ERBİL (İnşaat & Dış Ticaret)</div>
-                <div class="bg-white px-6 py-3 rounded-lg border border-slate-200 font-semibold text-slate-600 shadow-sm">KIZILTEPE (Akaryakıt)</div>
-                <div class="bg-white px-6 py-3 rounded-lg border border-slate-200 font-semibold text-slate-600 shadow-sm">ŞIRNAK (Lojistik)</div>
-                <div class="bg-white px-6 py-3 rounded-lg border border-slate-200 font-semibold text-slate-600 shadow-sm">BATMAN (Perakende)</div>
-                <div class="bg-white px-6 py-3 rounded-lg border border-slate-200 font-semibold text-slate-600 shadow-sm">DİYARBAKIR (Üretim)</div>
-            </div>
-
-            <div class="mt-16 flex justify-center">
-                <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 flex items-center gap-4">
-                    <span class="text-xs font-bold text-slate-400 uppercase tracking-widest border-r pr-4 border-slate-200">Çözüm Ortağı</span>
-                    <div class="text-2xl font-black text-slate-800 tracking-tighter italic">
-                        AKIN<span class="text-blue-600">SOFT</span>
+            <div class="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-16 items-center relative z-10">
+                <div class="space-y-8 animate-fade-in">
+                    <div class="inline-flex items-center gap-2 bg-white border border-blue-100 rounded-full px-4 py-1.5 shadow-sm">
+                        <span class="flex h-2 w-2 relative">
+                            <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+                            <span class="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span>
+                        </span>
+                        <span class="text-xs font-bold text-blue-900 uppercase tracking-wide">Mardin & Irak Yetkili Çözüm Merkezi</span>
                     </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="iletisim" class="py-24 bg-blue-950 text-white relative overflow-hidden">
-        <div class="absolute right-0 top-0 h-full w-1/2 bg-blue-900/30 -skew-x-12 transform origin-top-right"></div>
-        
-        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-16 relative z-10">
-            <div>
-                <h2 class="text-4xl font-bold mb-6">Bize Ulaşın</h2>
-                <p class="text-blue-200 mb-10 text-lg">Projenizi dinleyelim, Mardin ve Irak bölgesi için en doğru teknolojik altyapıyı birlikte kuralım.</p>
-                
-                <div class="space-y-6">
-                    <a href="tel:05438140449" class="flex items-center gap-4 p-4 bg-white/5 rounded-2xl border border-white/10 hover:bg-white/10 transition group">
-                        <div class="w-12 h-12 bg-green-500 rounded-full flex items-center justify-center shrink-0 shadow-lg shadow-green-500/30 group-hover:scale-110 transition">
-                            <i data-lucide="phone" class="w-6 h-6 text-white"></i>
-                        </div>
-                        <div>
-                            <p class="text-xs text-blue-300 font-bold uppercase tracking-wider">TELEFON / WHATSAPP</p>
-                            <p class="text-xl font-bold">0543 814 04 49</p>
-                        </div>
-                    </a>
-
-                    <div class="flex items-center gap-4 p-4">
-                        <div class="w-12 h-12 bg-blue-800 rounded-full flex items-center justify-center shrink-0">
-                            <i data-lucide="map-pin" class="w-6 h-6 text-blue-200"></i>
-                        </div>
-                        <div>
-                            <p class="text-xs text-blue-300 font-bold uppercase tracking-wider">ADRES</p>
-                            <p class="text-lg">Kızıltepe Merkez, Mardin</p>
-                        </div>
-                    </div>
-
-                    <div class="flex gap-4 mt-8 pt-8 border-t border-white/10">
-                        <a href="https://www.facebook.com/akinsoft.mardin" target="_blank" class="w-12 h-12 rounded-full bg-blue-900 flex items-center justify-center hover:bg-blue-600 transition"><i data-lucide="facebook" class="w-5 h-5"></i></a>
-                        <a href="https://www.instagram.com/kurumsalkurtay/" target="_blank" class="w-12 h-12 rounded-full bg-blue-900 flex items-center justify-center hover:bg-pink-600 transition"><i data-lucide="instagram" class="w-5 h-5"></i></a>
-                    </div>
-                </div>
-            </div>
-
-            <form id="contactForm" class="bg-white text-slate-900 p-8 rounded-3xl shadow-2xl">
-                <h3 class="text-2xl font-bold text-blue-950 mb-6">Hızlı Teklif Formu</h3>
-                <div class="space-y-4">
-                    <input type="text" id="fName" required placeholder="Adınız Soyadınız" class="w-full p-4 bg-slate-50 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-blue-600 transition">
-                    <input type="tel" id="fPhone" required placeholder="Telefon Numaranız" class="w-full p-4 bg-slate-50 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-blue-600 transition">
-                    <select id="fTopic" class="w-full p-4 bg-slate-50 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-blue-600 transition text-slate-500">
-                        <option>Konu Seçiniz</option>
-                        <option>Market Barkod Sistemi</option>
-                        <option>Restoran Adisyon</option>
-                        <option>Akaryakıt Otomasyonu</option>
-                        <option>Wolvox ERP / İhracat</option>
-                    </select>
-                    <textarea id="fMsg" rows="3" placeholder="Mesajınız..." class="w-full p-4 bg-slate-50 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-blue-600 transition"></textarea>
                     
-                    <button type="submit" class="w-full bg-blue-950 text-white py-4 rounded-xl font-bold hover:bg-blue-900 transition shadow-lg">
-                        Mesaj Gönder
-                    </button>
+                    <h1 class="text-5xl lg:text-7xl font-extrabold text-blue-950 leading-[1.1]">
+                        İşletmenizi <br>
+                        <span class="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-indigo-600">Teknolojiyle Büyütün.</span>
+                    </h1>
+                    
+                    <p class="text-lg text-slate-600 max-w-lg leading-relaxed">
+                        Akınsoft Wolvox güvencesiyle; Market, Restoran, Akaryakıt ve İhracat süreçlerinizi tek merkezden yönetin. Hatasız, hızlı ve güvenli.
+                    </p>
+                    
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <a href="#hizmetler" class="bg-blue-950 text-white px-8 py-4 rounded-2xl font-bold hover:bg-blue-900 transition flex items-center justify-center gap-2 shadow-xl shadow-blue-900/20 hover:-translate-y-1">
+                            Çözümleri İncele
+                        </a>
+                        <a href="tel:05438140449" class="bg-white text-blue-950 border border-slate-200 px-8 py-4 rounded-2xl font-bold hover:bg-slate-50 transition flex items-center justify-center gap-2">
+                            <i data-lucide="phone" class="w-5 h-5"></i> 0543 814 04 49
+                        </a>
+                    </div>
                 </div>
-            </form>
-        </div>
-    </section>
+
+                <div class="relative group">
+                    <div class="relative z-10 rounded-3xl overflow-hidden shadow-2xl border-[6px] border-white transform transition duration-500 hover:scale-[1.01]">
+                        <img src="https://images.unsplash.com/photo-1556742049-0cfed4f7a07d?auto=format&fit=crop&q=80&w=800" alt="Barkod Sistemi ve ERP Ekranı" class="w-full h-[500px] object-cover" loading="lazy">
+                        
+                        <div class="absolute inset-0 bg-gradient-to-t from-blue-950/90 via-transparent to-transparent flex flex-col justify-end p-8">
+                            <div class="text-white">
+                                <h3 class="font-bold text-2xl">Uçtan Uca Otomasyon</h3>
+                                <p class="text-blue-200">Stok, Cari, Fatura ve Raporlama Sistemi</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="absolute -right-6 bottom-32 bg-white p-4 rounded-2xl shadow-xl border border-slate-100 z-20 animate-bounce" style="animation-duration: 4s;">
+                        <div class="flex items-center gap-3">
+                            <div class="bg-orange-100 p-3 rounded-xl text-orange-600"><i data-lucide="fuel" class="w-6 h-6"></i></div>
+                            <div>
+                                <p class="text-[10px] text-slate-400 font-bold uppercase">AKARYAKIT</p>
+                                <p class="font-bold text-blue-950">Vardiya & Pompa</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="absolute -left-6 top-24 bg-white p-4 rounded-2xl shadow-xl border border-slate-100 z-20 animate-bounce" style="animation-duration: 3s;">
+                        <div class="flex items-center gap-3">
+                            <div class="bg-red-100 p-3 rounded-xl text-red-600"><i data-lucide="utensils" class="w-6 h-6"></i></div>
+                            <div>
+                                <p class="text-[10px] text-slate-400 font-bold uppercase">RESTORAN</p>
+                                <p class="font-bold text-blue-950">Adisyon & Menü</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="hizmetler" class="py-24 bg-white">
+            <div class="max-w-7xl mx-auto px-6">
+                <div class="text-center mb-16">
+                    <h2 class="text-3xl font-bold mb-4 text-blue-950">Sektörel Çözümler</h2>
+                    <p class="text-slate-500 max-w-2xl mx-auto">İhtiyacınıza tam uyan, gereksiz detaylardan arındırılmış profesyonel Akınsoft paketleri.</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 auto-rows-[340px]">
+                    
+                    <div class="md:col-span-2 bento-card bg-slate-50 rounded-3xl p-8 border border-slate-100 relative overflow-hidden group">
+                        <div class="relative z-10 flex flex-col justify-between h-full">
+                            <div>
+                                <div class="w-12 h-12 bg-blue-600 text-white rounded-xl flex items-center justify-center mb-6 shadow-lg shadow-blue-600/20">
+                                    <i data-lucide="scan-barcode" class="w-6 h-6"></i>
+                                </div>
+                                <h3 class="text-2xl font-bold text-blue-950 mb-3">Market & Hızlı Satış</h3>
+                                <p class="text-slate-600 max-w-md">Barkodlu terazi entegrasyonu, hızlı kasiyer ekranı, raf etiketi basımı ve saniyelik stok takibi. Kasada beklemek yok, hata yok.</p>
+                            </div>
+                            <a href="https://wa.me/905438140449" class="inline-flex items-center gap-2 text-blue-700 font-bold mt-4 hover:gap-4 transition-all">Detaylı Bilgi <i data-lucide="arrow-right" class="w-4 h-4"></i></a>
+                        </div>
+                        <div class="absolute right-0 bottom-0 w-64 h-64 bg-blue-100 rounded-full blur-3xl opacity-50 translate-x-1/3 translate-y-1/3 group-hover:bg-blue-200 transition"></div>
+                    </div>
+
+                    <div class="md:row-span-2 bento-card bg-blue-950 text-white rounded-3xl p-8 relative overflow-hidden group">
+                        <div class="absolute inset-0 bg-gradient-to-br from-blue-900 to-slate-900"></div>
+                        <div class="relative z-10 flex flex-col h-full">
+                            <div class="w-12 h-12 bg-orange-500 text-white rounded-xl flex items-center justify-center mb-6 shadow-lg shadow-orange-500/20">
+                                <i data-lucide="fuel" class="w-6 h-6"></i>
+                            </div>
+                            <h3 class="text-2xl font-bold mb-4">Akaryakıt Otomasyonu</h3>
+                            <p class="text-blue-200 text-sm mb-6 leading-relaxed">İstasyonlar için uçtan uca çözüm: Pompa yazar kasa, tank otomasyonu ve market entegrasyonu tek ekranda.</p>
+                            
+                            <div class="space-y-4 mb-8">
+                                <div class="flex items-center gap-3 p-3 bg-white/10 rounded-xl">
+                                    <i data-lucide="check-circle" class="w-5 h-5 text-green-400"></i>
+                                    <span class="text-sm font-medium">Vardiya Takibi</span>
+                                </div>
+                                <div class="flex items-center gap-3 p-3 bg-white/10 rounded-xl">
+                                    <i data-lucide="check-circle" class="w-5 h-5 text-green-400"></i>
+                                    <span class="text-sm font-medium">Tank Seviye Kontrol</span>
+                                </div>
+                                <div class="flex items-center gap-3 p-3 bg-white/10 rounded-xl">
+                                    <i data-lucide="check-circle" class="w-5 h-5 text-green-400"></i>
+                                    <span class="text-sm font-medium">EPDK Uyumlu</span>
+                                </div>
+                            </div>
+
+                            <div class="mt-auto">
+                                <a href="https://wa.me/905438140449" class="block w-full py-4 bg-white text-blue-950 rounded-xl text-center font-bold hover:bg-blue-50 transition">Teklif İste</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="bento-card bg-white rounded-3xl p-8 border border-slate-100 shadow-sm hover:border-red-100 group">
+                        <div class="w-12 h-12 bg-red-100 text-red-600 rounded-xl flex items-center justify-center mb-6">
+                            <i data-lucide="utensils-crossed" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-blue-950 mb-2">Restoran Adisyon</h3>
+                        <p class="text-slate-500 text-sm">Garson el terminali, mutfak yazıcısı, QR Menü ve paket servis modülü. Hızlı servis, memnun müşteri.</p>
+                    </div>
+
+                    <div class="bento-card bg-white rounded-3xl p-8 border border-slate-100 shadow-sm hover:border-indigo-100 group">
+                        <div class="w-12 h-12 bg-indigo-100 text-indigo-600 rounded-xl flex items-center justify-center mb-6">
+                            <i data-lucide="bar-chart-3" class="w-6 h-6"></i>
+                        </div>
+                        <h3 class="text-xl font-bold text-blue-950 mb-2">Wolvox ERP</h3>
+                        <p class="text-slate-500 text-sm">Irak ihracat yönetimi, ön muhasebe, e-Fatura, e-İrsaliye ve detaylı finansal raporlama.</p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section id="referanslar" class="py-20 bg-slate-50 border-t border-slate-200">
+            <div class="max-w-7xl mx-auto px-6 text-center">
+                <h2 class="text-2xl font-bold text-blue-950 mb-10">Bölgesel Referans Noktalarımız</h2>
+                
+                <div class="flex flex-wrap justify-center gap-4">
+                    <span class="px-6 py-3 bg-white rounded-lg border border-slate-200 font-semibold text-slate-600 shadow-sm hover:border-blue-500 transition cursor-default">MARDİN (Gıda & Toptan)</span>
+                    <span class="px-6 py-3 bg-white rounded-lg border border-slate-200 font-semibold text-slate-600 shadow-sm hover:border-blue-500 transition cursor-default">IRAK/ERBİL (İnşaat & Dış Ticaret)</span>
+                    <span class="px-6 py-3 bg-white rounded-lg border border-slate-200 font-semibold text-slate-600 shadow-sm hover:border-blue-500 transition cursor-default">KIZILTEPE (Akaryakıt)</span>
+                    <span class="px-6 py-3 bg-white rounded-lg border border-slate-200 font-semibold text-slate-600 shadow-sm hover:border-blue-500 transition cursor-default">ŞIRNAK (Lojistik)</span>
+                    <span class="px-6 py-3 bg-white rounded-lg border border-slate-200 font-semibold text-slate-600 shadow-sm hover:border-blue-500 transition cursor-default">BATMAN (Perakende)</span>
+                    <span class="px-6 py-3 bg-white rounded-lg border border-slate-200 font-semibold text-slate-600 shadow-sm hover:border-blue-500 transition cursor-default">DİYARBAKIR (Üretim)</span>
+                </div>
+
+                <div class="mt-16 flex flex-col items-center gap-4">
+                    <span class="text-xs font-bold text-slate-400 uppercase tracking-widest">Yetkili Çözüm Ortağı</span>
+                    <div class="bg-white p-6 rounded-2xl shadow-sm border border-slate-100 hover:shadow-md transition">
+                        <img src="https://www.akinsoft.com.tr/logo/images/yatay-ana-bayi.png" alt="Akınsoft Mardin Yetkili Ana Bayi Logosu" class="h-12 md:h-16 object-contain" loading="lazy">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="iletisim" class="py-24 bg-blue-950 text-white relative overflow-hidden">
+            <div class="absolute right-0 top-0 h-full w-1/2 bg-blue-900/30 -skew-x-12 transform origin-top-right"></div>
+            
+            <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-16 relative z-10">
+                <div>
+                    <h2 class="text-4xl font-bold mb-6">Bize Ulaşın</h2>
+                    <p class="text-blue-200 mb-10 text-lg">Projenizi dinleyelim, Mardin ve Irak bölgesi için en doğru teknolojik altyapıyı birlikte kuralım.</p>
+                    
+                    <div class="space-y-6">
+                        <a href="tel:05438140449" class="flex items-center gap-4 p-4 bg-white/5 rounded-2xl border border-white/10 hover:bg-white/10 transition group">
+                            <div class="w-12 h-12 bg-green-500 rounded-full flex items-center justify-center shrink-0 shadow-lg shadow-green-500/30 group-hover:scale-110 transition">
+                                <i data-lucide="phone" class="w-6 h-6 text-white"></i>
+                            </div>
+                            <div>
+                                <p class="text-xs text-blue-300 font-bold uppercase tracking-wider">TELEFON / WHATSAPP</p>
+                                <p class="text-xl font-bold">0543 814 04 49</p>
+                            </div>
+                        </a>
+
+                        <div class="flex items-center gap-4 p-4">
+                            <div class="w-12 h-12 bg-blue-800 rounded-full flex items-center justify-center shrink-0">
+                                <i data-lucide="map-pin" class="w-6 h-6 text-blue-200"></i>
+                            </div>
+                            <div>
+                                <p class="text-xs text-blue-300 font-bold uppercase tracking-wider">ADRES</p>
+                                <p class="text-lg">Kızıltepe Merkez, Mardin</p>
+                            </div>
+                        </div>
+
+                        <div class="flex gap-4 mt-8 pt-8 border-t border-white/10">
+                            <a href="https://www.facebook.com/akinsoft.mardin" target="_blank" aria-label="Facebook" class="w-12 h-12 rounded-full bg-blue-900 flex items-center justify-center hover:bg-blue-600 transition"><i data-lucide="facebook" class="w-5 h-5"></i></a>
+                            <a href="https://www.instagram.com/kurumsalkurtay/" target="_blank" aria-label="Instagram" class="w-12 h-12 rounded-full bg-blue-900 flex items-center justify-center hover:bg-pink-600 transition"><i data-lucide="instagram" class="w-5 h-5"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <form id="contactForm" class="bg-white text-slate-900 p-8 rounded-3xl shadow-2xl">
+                    <h3 class="text-2xl font-bold text-blue-950 mb-6">Hızlı Teklif Formu</h3>
+                    <div class="space-y-4">
+                        <input type="text" id="fName" required placeholder="Adınız Soyadınız" class="w-full p-4 bg-slate-50 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-blue-600 transition">
+                        <input type="tel" id="fPhone" required placeholder="Telefon Numaranız" class="w-full p-4 bg-slate-50 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-blue-600 transition">
+                        <select id="fTopic" class="w-full p-4 bg-slate-50 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-blue-600 transition text-slate-500">
+                            <option>Konu Seçiniz</option>
+                            <option>Market Barkod Sistemi</option>
+                            <option>Restoran Adisyon</option>
+                            <option>Akaryakıt Otomasyonu</option>
+                            <option>Wolvox ERP / İhracat</option>
+                        </select>
+                        <textarea id="fMsg" rows="3" placeholder="Mesajınız..." class="w-full p-4 bg-slate-50 rounded-xl border border-slate-200 focus:outline-none focus:ring-2 focus:ring-blue-600 transition"></textarea>
+                        
+                        <button type="submit" class="w-full bg-blue-950 text-white py-4 rounded-xl font-bold hover:bg-blue-900 transition shadow-lg">
+                            Mesaj Gönder
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </section>
+    </main>
 
     <footer class="bg-white py-10 border-t border-slate-200">
         <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-6">
@@ -322,7 +374,7 @@
         </div>
     </footer>
 
-    <a href="https://wa.me/905438140449" class="fixed bottom-8 right-8 z-40 bg-[#25D366] text-white w-16 h-16 rounded-full flex items-center justify-center shadow-lg hover:scale-110 transition whatsapp-float">
+    <a href="https://wa.me/905438140449" aria-label="WhatsApp ile Sohbet Edin" class="fixed bottom-8 right-8 z-40 bg-[#25D366] text-white w-16 h-16 rounded-full flex items-center justify-center shadow-lg hover:scale-110 transition whatsapp-float">
         <i data-lucide="message-circle" class="w-8 h-8"></i>
     </a>
 
@@ -346,6 +398,7 @@
                             </tbody>
                     </table>
                 </div>
+                <p class="text-xs text-slate-400 mt-4 text-center">Not: Mesajlar tarayıcı hafızasında saklanır. Sayfayı yenileseniz de gitmez.</p>
             </div>
         </div>
     </div>
@@ -353,16 +406,14 @@
     <script>
         lucide.createIcons();
 
-        // --- 1. Gelişmiş Çeviri Fonksiyonu ---
+        // 1. Gelişmiş Google Translate Tetikleyici
         function changeLang(langCode) {
             const select = document.querySelector(".goog-te-combo");
             if (select) {
                 select.value = langCode;
                 select.dispatchEvent(new Event('change'));
             } else {
-                // Eğer Google daha yüklenmediyse uyar
-                alert("Çeviri sistemi yükleniyor... Lütfen 1 saniye bekleyip tekrar tıklayın.");
-                // Arka planda tekrar dene
+                alert("Dil sistemi yükleniyor, lütfen 1 saniye sonra tekrar deneyin.");
                 setTimeout(() => {
                     const retrySelect = document.querySelector(".goog-te-combo");
                     if(retrySelect) { retrySelect.value = langCode; retrySelect.dispatchEvent(new Event('change')); }
@@ -370,7 +421,7 @@
             }
         }
 
-        // --- 2. Admin & Form Mantığı ---
+        // 2. Admin & Form Mantığı (LocalStorage ile Kalıcı Kayıt)
         const modal = document.getElementById('adminModal');
         const form = document.getElementById('contactForm');
 
@@ -385,7 +436,6 @@
             }
         }
 
-        // Form Gönderimi
         form.addEventListener('submit', (e) => {
             e.preventDefault();
             const name = document.getElementById('fName').value;
@@ -398,11 +448,10 @@
             msgs.unshift(newMsg);
             localStorage.setItem('kurtayMsgs', JSON.stringify(msgs));
 
-            alert("Mesajınız başarıyla alındı! Size en kısa sürede dönüş yapacağız.");
+            alert("Mesajınız başarıyla alındı! Yetkililerimiz " + phone + " üzerinden size dönecektir.");
             form.reset();
         });
 
-        // Mesajları Listele
         function renderMsgs() {
             const msgs = JSON.parse(localStorage.getItem('kurtayMsgs') || "[]");
             const tbody = document.getElementById('msgTableBody');
@@ -419,7 +468,7 @@
                         <td class="p-4 text-slate-500">${m.date}</td>
                         <td class="p-4 font-bold">${m.name}</td>
                         <td class="p-4">${m.phone}</td>
-                        <td class="p-4"><span class="bg-blue-100 text-blue-700 px-2 py-1 rounded-xs text-xs">${m.topic}</span></td>
+                        <td class="p-4"><span class="bg-blue-100 text-blue-700 px-2 py-1 rounded-sm text-xs">${m.topic}</span></td>
                     </tr>
                 `;
             });
